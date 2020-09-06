@@ -1,0 +1,360 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    background-color: #EEE;
+}
+.header .logo {
+    float: left;
+    margin-left: 55px;
+}
+.header .logo h1 {
+    line-height: 90px;
+}
+.header .logo h1 a {
+    color: orange;
+    text-decoration: none;
+}
+.header .links {
+    list-style: none;
+    line-height: 90px;
+    float: right;
+    margin-right: 100px;
+}
+.header .links li {
+    display: inline-block;
+    margin-left: 40px;
+}
+.header .links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+.header .links li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: blue;
+    position: absolute;
+    top: 30px;
+    transition: .3s ease-in-out;
+}
+.header .links li a:hover::after {
+    width: 100%;
+}
+
+.header .links li a.active {
+    color: orange;
+}
+.clear {
+    clear: both;
+}
+.icon-nav {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    background-color: black;
+    width: 44px;
+    height: 40px;
+    text-align: center;
+    line-height: 45px;
+    border: 2px solid rgba(175, 164, 164, 0.726);
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    cursor: pointer;
+}
+.icon-nav .icon {
+    color: #EEE;
+    font-size: 25px;
+}
+@media (max-width : 990px) {
+    .header {
+        position: fixed;
+        width: 100%;
+        height: 90px;
+        background-color: #EEE;
+        z-index: 2;
+    }
+    .header .logo {
+        margin-left: 55px;
+    }
+    .header .logo h1 {
+        color: orange;
+        line-height: 90px;
+    }
+    .header .links {
+        list-style: none;
+        margin-right: 0;
+        border: 1px solid #EEE;
+        width: 100%;
+        height: 410px;
+        display: none;
+        background-color: rgb(19, 173, 152);
+    }
+    .header .links li {
+        display: block;
+        height: calc(410px / 5);
+        border-bottom: 1px solid #EEE;
+        text-align: right;
+        margin: auto;
+        padding-right: 30px;
+        transition: .3s ease-in-out;
+    }
+    .header .links li:hover {
+        background-color: rgba(163, 158, 158, 0.705);
+    }
+    .header .links li a {
+        text-align: center;
+        color: white;
+        display: block;
+    }
+    .header .links li a.active {
+        color: orange;
+    }
+    .icon-nav {
+        display: block;
+    }
+    .icon-nav .icon {
+        color: #EEE;
+        font-size: 25px;
+    }
+    .header .links li a:hover::after {
+        width: 0;
+    }
+}
+.home {
+    width: 100%;
+    height: 500px;
+    background-image: url("3.png");
+    background-size: cover;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 40px;
+}
+.home .test {
+    position: absolute;
+    width: 100%;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.home .test h1 {
+    padding: 7px;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.wrapper {
+    margin: 40px 0 80px 0;
+}
+.wrapper .container .row h3 {
+    margin: 0 0 .5em 0;
+    color: #5385c1;
+}
+.wrapper .container .row p {
+    font-size: 100%;
+    margin: 0 0 1em 0;
+}
+.wrapper .col-md-12 {
+    margin: 0 auto 20px auto;
+}
+
+
+
+
+.down {
+    display: block;
+    width: 50px;
+    height: 60px;
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 25%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.down:hover {
+    border: 1px solid #5385c1;
+}
+.down .fa-arrow-down {
+    font-size: 22px;
+    color: rgb(133, 125, 125);
+    animation: bot 1.8s ease-in-out infinite;
+}
+@keyframes bot {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+
+
+
+
+
+.banner {
+    margin: 90px 0;
+    width: 100%;
+    background-color: #5385c1;
+    padding: 6em 0;
+    text-align: center;
+}
+.banner .banner-item {
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2em 1.5em;
+    margin-bottom: 30px;
+}
+.banner .tit {
+    color: white;
+    margin-bottom: 10px;
+}
+.banner .lead {
+    margin-bottom: 4em;
+    color: white;
+}
+.banner .banner-item img {
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+.banner .container .row .title {
+    color: white;
+    margin: 0 0 .5em 0;
+}
+.special-title {
+    margin: 100px 0;
+    text-align: center;
+    color: #5385c1;
+}
+.special-title h1 {
+    margin-bottom: 10px;
+}
+.special-title p {
+    color: rgb(160, 158, 158);
+}
+.special h1 {
+    font-size: 1.35em;
+    margin: 30px 0;
+}
+.special p {
+    margin-bottom: 30px;
+}
+.special img {
+    width: 100%;
+}
+.special .col-lg-6 {
+    margin-bottom: 30px;
+}
+.special .btn {
+    border-radius: 0;
+}
+.footer {
+    border-top: 2px solid black;
+    height: 100px;
+    background-color: #EEE;
+}
+.footer p {
+    line-height: 100px;
+    float: left;
+    margin-left: 40px;
+}
+.footer .icones {
+    float: right;
+    line-height: 100px;
+    margin-right: 30px;
+}
+.icones .ico {
+    margin-left: 30px;
+    font-size: 26px;
+    cursor: pointer;
+}
+.icones .ico:nth-child(1) {
+    color: blue;
+}
+.icones .ico:nth-child(2) {
+    color: #23A8E1;
+}
+.icones .ico:nth-child(3) {
+    color: black;
+}
+.icones .ico:nth-child(4) {
+    color: yellow;
+}
+.icones .ico:nth-child(5) {
+    color: red;
+}
+@media (max-width: 700px) {
+    .footer {
+        padding: 70px 0;
+        background-color: #EEE;
+    }
+    
+    
+    .footer p {
+        margin-left: 0;
+        line-height: 0;
+        display: block;
+        float: none;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .footer .icones {
+        float: none;
+        line-height: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+    
+    .icones .ico {
+        margin-left: 30px;
+        font-size: 26px;
+        cursor: pointer;
+    }
+    
+    .icones .ico:nth-child(1):hover {
+        color: blue;
+    }
+}
+.mostafa {
+    color: blue;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.up {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: black;
+    border: 2px solid blue;
+    color: #EEE;
+}
